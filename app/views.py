@@ -29,7 +29,7 @@ def contact():
             email= cForm.email.data
             subject= cForm.subject.data
             message= cForm.message.data
-            #send_email(name,email,subject,message)
+            send_email(name,email,subject,message)
             flash('message sent successfully','success')
             return redirect(url_for('home'))
     flash_errors(cForm)
