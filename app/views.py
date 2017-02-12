@@ -30,7 +30,7 @@ def contact():
             subject= cForm.subject.data
             message= cForm.message.data
             send_email(name,email,subject,message)
-            flash('message sent successfully','success')
+            flash('message sent successfully')
             return redirect(url_for('home'))
     flash_errors(cForm)
     return render_template('contact.html', form=cForm)

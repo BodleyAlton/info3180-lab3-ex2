@@ -17,10 +17,10 @@
   <p>This webpage is a contact page.</p>
   <form method= "POST" action="{{ url_for('contact') }}">
     {{form.csrf_token}}
-    <div class='form-group'>{{form.name.label}} {{form.name(size=20,class="form-control")}}</div>
-    <div class='form-group'>{{form.email.label}} {{form.email(size=20,class="form-control",type="email")}}</div>
-    <div class='form-group'>{{form.subject.label}} {{form.subject(type="textarea",class="form-control",rows="4", cols="16")}} </div>
-    <div class="form-group">{{form.message.label}}{{form.message(class="form-control",type="textarea")}}</div>
+    <div class='form-group'>{{form.name.label}} <em class='red'>(Required)</em> <br>Please enter your full name {{form.name(size=20,class="form-control")}}</div>
+    <div class='form-group'>{{form.email.label}} <em class='red'>(Required)</em><br>Please enter your e-mail address {{form.email(size=20,class="form-control",type="email")}}</div>
+    <div class='form-group'>{{form.subject.label}} <em class='red'>(Required)</em><br>Please enter the subject for your message {{form.subject(type="textarea",class="form-control",rows="4", cols="16")}} </div>
+    <div class="form-group">{{form.message.label}} <em class="red">(Required)</em><br>Please enter the message you would liek to send {{form.message(class="form-control",rows="4")}}</div>
     <button type="submit" class="btn btn-primary">Send</button>
   </form>
 </div>
